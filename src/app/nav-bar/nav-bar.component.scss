@@ -1,0 +1,68 @@
+@import '../../styles/customVariables';
+
+p, a, ul{
+    margin-bottom: 0rem;
+}
+
+.header{
+    background: var(--adminColor) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand{
+    font-weight: bold;
+
+    color: var(--darkColor);
+
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+
+    gap: 1.2rem;
+
+    li{
+        display: inline-block;
+
+        a{
+            text-decoration: none;
+
+            color: $darkColor;
+
+            &:hover,
+            &:focus{
+                color: $mainColor;
+            }
+
+            &:focus{
+                outline: 1px solid $mainColor;
+            }
+
+
+            &.active{
+                color: $mainColor;
+            }
+            
+        }
+
+        button{
+            @include subscribe_button($text-color: #fff,
+                        $background: $mainColor,
+                        $background-darker: true);
+        }
+
+        a, button{
+            width: 100%;
+        }
+
+    }
+}
+
+
+.mb-gap{
+    margin-bottom: 4rem;
+}

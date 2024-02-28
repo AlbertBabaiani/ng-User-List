@@ -1,0 +1,12 @@
+<div class="user row text-light lead p-2 mb-2">
+    <div class="col col-12 col-md-2">
+        <button type="button" class="btn" (click)="showInfo()"
+        [ngClass]="{'active': user.name === selectedUser}"
+        >More info</button>
+    </div>
+
+    <div class="col col-12 col-md-4">{{ user.name }}</div>
+    <div class="col col-12 col-md-2">{{ user.gender }}</div>
+    <div class="col col-12 col-md-2">{{ user.subType }}</div>
+    <div class="col col-12 col-md-2">{{ user.status }}</div>   
+</div>

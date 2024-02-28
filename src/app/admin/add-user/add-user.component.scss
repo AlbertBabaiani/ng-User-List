@@ -1,0 +1,40 @@
+@import '../../../styles/customVariables';
+
+.custom-container{
+    margin-inline: auto;
+    max-width: 44rem;
+    width: 90%;
+}
+
+.row{
+    input,
+    select{
+        width: 100%;
+        cursor: pointer;
+        &:focus,
+        &:active{
+            border-color: $adminColor;
+            box-shadow: 0 0 0 0.25rem rgba(#2ECC71, 0.25);
+        }
+    }
+}
+
+.add-user{
+    width: 100%;
+    border-width: 3px;
+
+    @include subscribe_button($text-color: #fff,
+                            $text-hover-color: $adminColor,
+                            $color-active: $adminColor,
+
+                            $background: $adminColor,
+                            $background-active: $adminColor,
+                            $background-darker: false,
+                            
+                            $border-show: true,
+                            $border-color: $adminColor,
+                            $border-hover-color: $adminColor,
+                            $border-width: 3px,
+                            $border-active: $adminColor);
+
+}

@@ -1,0 +1,81 @@
+@import '../../../../styles/customVariables';
+
+.user{
+    background: $darkColor;
+    border-bottom: 3px solid $adminColor;
+
+    .col{
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        &:first-child{
+            button{
+                @include subscribe_button($text-color: #fff,
+                                        $background-hover: $adminColor,
+                                        $border-show: false,
+                                        $background-darker: false);
+            }
+        }
+
+
+        &:not(:first-child):not(:last-child) {
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                width: 1px;
+                height: 70%;
+                background: $adminColor;
+            }
+        }
+    }
+}
+
+
+@media (width <= 767px) {
+    .user .col{
+        &:not(:first-child):not(:last-child)::after{
+            display: none;
+        }
+
+        margin-bottom: 0.5rem;
+
+        &:first-child{
+            button{
+                width: 100%;
+                margin-bottom: 1rem;
+                margin-top: 0.5rem;
+
+                @include subscribe_button($text-color: $adminColor,
+                                        $text-hover-color: #fff,
+
+                                        $border-color: $adminColor,
+                                        $border-hover-color: $adminColor,
+                                        $border-width: 3px,
+                                        $border-show: true,
+
+                                        $background-darker: false,
+                                        $background-hover: $adminColor);
+
+                border: 1px solid $adminColor;
+            }
+        }
+    }
+}
+
+@media (width > 767px) {
+    .user .col{
+        &:nth-child(3),
+        &:nth-child(4),
+        &:last-child {
+            padding-left: 1rem;
+        }
+    }
+}

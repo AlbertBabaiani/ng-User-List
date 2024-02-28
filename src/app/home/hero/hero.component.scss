@@ -1,0 +1,11 @@
+@import '../../../styles/customVariables';
+
+.custom-bg{
+    background: $darkColor;
+}
+
+button{
+    @include subscribe_button($text-color: #fff,
+                            $background: $mainColor,
+                            $background-darker: true);
+}

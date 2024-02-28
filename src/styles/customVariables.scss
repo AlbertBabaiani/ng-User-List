@@ -1,0 +1,42 @@
+$darkColor: #1C2833;
+$mainColor: #0047AB;
+$adminColor: #2ECC71;
+
+
+@mixin subscribe_button($text-color,
+                        $text-hover-color: $text-color,
+
+                        $background: transparent,
+                        $background-hover: transparent,
+                        $background-darker: true,
+
+                        $border-show: false,
+                        $border-color: $background,
+                        $border-hover-color: $background,
+                        $border-width: '0px',
+                        
+                        $color-active: $text-hover-color,
+                        $background-active: $background-hover,
+                        $border-active: $border-hover-color){
+
+    --bs-btn-color: #{$text-color};
+    --bs-btn-hover-color: #{$text-hover-color};
+
+
+    --bs-btn-bg: #{$background};
+    // --bs-btn-hover-bg: #{darken($background, 8%)};
+
+    $new_background: #{if($background-darker, darken($background, 8%), $background-hover)};
+    // @debug($new_background);
+    --bs-btn-hover-bg: #{$new_background};
+
+
+    border-width: #{$border-width};
+    --bs-btn-border-color: #{$border-color};
+    --bs-btn-hover-border-color: #{$border-hover-color};
+    border: #{if($border-show, '', none)};
+
+    --bs-btn-active-color: #{$color-active};
+    --bs-btn-active-bg: #{$background-active};
+    --bs-btn-active-border-color: #{$border-active};
+}

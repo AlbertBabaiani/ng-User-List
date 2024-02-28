@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/customVariables';
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+}
+
+::selection{
+    background: $mainColor;
+    color: #fff;
+}
+
+
+.swal2-popup .swal2-actions .swal2-confirm {
+    background-color: $adminColor;
+    box-shadow: rgba($adminColor, 0.5) 0px 0px 0px 3px;
+}

@@ -1,0 +1,11 @@
+<div class="custom-container mt-5">
+    <ul>
+        <ng-container *ngFor="let user of users">
+            <li>
+                <app-user [user]="user"></app-user>
+            </li>
+        </ng-container>
+    </ul>
+
+    <app-user-details></app-user-details>
+</div>
