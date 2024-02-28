@@ -8,4 +8,12 @@ button{
     @include subscribe_button($text-color: #fff,
                             $background: $mainColor,
                             $background-darker: true);
+
+    padding-block: 0.7rem;
+}
+
+@media (width <= 991px){
+    button{
+        width: 100%;
+    }
 }

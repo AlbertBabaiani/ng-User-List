@@ -12,6 +12,15 @@ import { UserListComponent } from './admin/user-list/user-list.component';
 import { UserComponent } from './admin/user-list/user/user.component';
 import { UserDetailsComponent } from './admin/user-list/user-details/user-details.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
+
+const routes: Routes = [
+  {path: '', redirectTo: 'Home', pathMatch: 'full'},
+  {path: 'Home', component: HomeComponent},
+  {path: 'Admin', component: AdminComponent},
+  {path: '**', component: ErrorComponent}
+]
 
 @NgModule({
   declarations: [
@@ -24,11 +33,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     UserListComponent,
     UserComponent,
     UserDetailsComponent,
-    NavBarComponent
+    NavBarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
