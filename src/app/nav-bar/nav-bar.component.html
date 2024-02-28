@@ -3,7 +3,7 @@
   
       <nav class="navbar navbar-expand-lg justify-content-between">
   
-          <a class="navbar-brand" href="#">MYSITE</a>
+          <a class="navbar-brand" routerLink="">MYSITE</a>
   
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,13 +13,13 @@
   
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="btn btn-lg" [ngClass]="{'active': current_page === 'home'}" href="#"
-                (click)="changePage('home')">Home</a>
+                <a class="btn btn-lg" routerLink="/Home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Home</a>
               </li>
   
               <li class="nav-item">
-                <a class="btn btn-lg" [ngClass]="{'active': current_page === 'admin'}" href="#"
-                (click)="changePage('admin')">Admin</a>
+                <a class="btn btn-lg" routerLink="/Admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Admin</a>
               </li>
   
               <li class="nav-item">
