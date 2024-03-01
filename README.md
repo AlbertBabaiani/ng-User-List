@@ -1,5 +1,29 @@
 # UserList
 
+This repository contains a simple Angular application called "ng-user-list" that allows users to view and add users from a list. The application is built using Angular framework and styled with Bootstrap for a clean and responsive design. Also it uses SweetAlert2.
+
+## Features
+
+- View a list of users with their names, emails, and phone numbers.
+- Add new users to the list with their information.
+
+## Usage
+
+The project is hosted on Netlify. You can access it at [https://ng-userlist.netlify.app](https://ng-userlist.netlify.app).
+
+---
+
+## Project Structure
+
+The project structure consists of Angular components, services, and models organized within the `src/app` directory. Key components include:
+
+- **Components**: Contains Angular components responsible for rendering user forms and lists.
+- **Models**: Defines the structure of user data.
+- **Services**: Implements services for managing user data.
+- **App Component**: The root component of the Angular application.
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
 
 ## Development server
