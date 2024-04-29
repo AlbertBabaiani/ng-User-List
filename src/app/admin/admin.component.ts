@@ -6,5 +6,7 @@ import { Component, inject } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-  
+  constructor(){
+    console.log('gg')
+  }
 }
